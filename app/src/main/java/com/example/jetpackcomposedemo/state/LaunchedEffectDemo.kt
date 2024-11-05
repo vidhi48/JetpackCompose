@@ -38,7 +38,7 @@ fun LaunchedEffectProblem() {
     // Prob 2: LaunchedEffect is called multiple times whenever recomposition occurs
     // Try changing configuration before counter reached to 10
     // When changing configuration or the recomposition occurs in between then the
-    // LaunchedEffect will dispose old scope and create new scope (To stop memory leaks)
+    // LaunchedEffect will dispose old scope and create new scope (To helps prevent memory leaks)
     LaunchedEffect(key1 = Unit) {
         Log.e("LaunchedEffect", "Started...")
 

@@ -27,16 +27,17 @@ fun SideEffectHandlerScreen() {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize(1f)
     ) {
-        Text("Side Effect:", fontWeight = FontWeight.Bold, color = Color.Red)
+        Text("Side Effect: ", fontWeight = FontWeight.Bold, color = Color.Red)
         SideEffectProblem()
         Spacer(modifier = Modifier.height(15.dp))
 
-        Text("Launched Effect:", fontWeight = FontWeight.Bold, color = Color.Red)
+        Text("Launched Effect: ", fontWeight = FontWeight.Bold, color = Color.Red)
         LaunchEffectHandler()
         LaunchedEffectProblem()
         Spacer(modifier = Modifier.height(15.dp))
 
         RememberCoroutineScope(context = LocalContext.current)
+        RememberUpdatedStateScreen()
     }
 }
 

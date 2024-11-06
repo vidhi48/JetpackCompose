@@ -1,11 +1,19 @@
 package com.example.jetpackcomposedemo.components
 
+import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.AssistChip
+import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.Icon
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,6 +30,7 @@ fun CheckBoxAndRadioScreen() {
     Column {
         CheckBoxScreen()
         RadioButtonScreen()
+        ChipScreen()
     }
 }
 
@@ -78,6 +87,35 @@ fun RadioButtonScreen() {
         Text(
             text = "Selected option: $selectedOption",
             modifier = Modifier.padding(top = 16.dp, start = 16.dp)
+        )
+    }
+}
+
+@Composable
+fun ChipScreen() {
+    var selected by remember { mutableStateOf(false) }
+
+    Column(modifier = Modifier.padding(top = 20.dp, start = 16.dp)) {
+        AssistChip(
+            onClick = { Log.e("Chip", "Chip Tapped!")},
+            label = { Text("Assist Chip") },
+            leadingIcon = {
+                Icon(Icons.Filled.Settings, contentDescription = "Localized description")
+                Modifier.size(AssistChipDefaults.IconSize)
+            }
+        )
+
+        FilterChip(
+            onClick = { selected = !selected },
+            label = { Text("Filter Chip") },
+            selected = selected,
+            leadingIcon = if (selected) {
+                {
+                    Icon(Icons.Filled.Settings, contentDescription = "Localized description")
+                }
+            } else {
+                null
+            }
         )
     }
 }

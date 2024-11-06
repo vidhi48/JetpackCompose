@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.selection.selectable
@@ -13,9 +14,11 @@ import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -29,7 +32,9 @@ import androidx.compose.ui.unit.dp
 fun CheckBoxAndRadioScreen() {
     Column {
         CheckBoxScreen()
+        HorizontalDivider(thickness = 2.dp, modifier = Modifier.padding(top = 15.dp))
         RadioButtonScreen()
+        HorizontalDivider(thickness = 2.dp, modifier = Modifier.padding(top = 15.dp))
         ChipScreen()
         DatePickersScreen()
         DialogScreen()
@@ -97,7 +102,7 @@ fun RadioButtonScreen() {
 fun ChipScreen() {
     var selected by remember { mutableStateOf(false) }
 
-    Column(modifier = Modifier.padding(top = 20.dp, start = 16.dp)) {
+    Row (modifier = Modifier.padding(top = 20.dp, start = 16.dp)) {
         AssistChip(
             onClick = { Log.e("Chip", "Chip Tapped!")},
             label = { Text("Assist Chip") },
@@ -106,6 +111,8 @@ fun ChipScreen() {
                 Modifier.size(AssistChipDefaults.IconSize)
             }
         )
+
+        VerticalDivider(thickness = 2.dp, modifier = Modifier.height(50.dp).padding(start = 20.dp, end = 20.dp))
 
         FilterChip(
             onClick = { selected = !selected },

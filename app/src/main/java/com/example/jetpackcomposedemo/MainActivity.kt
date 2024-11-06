@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.example.jetpackcomposedemo.components.AppBarScreen
+import com.example.jetpackcomposedemo.components.BadgeScreen
 import com.example.jetpackcomposedemo.components.ComposableListScreen
 import com.example.jetpackcomposedemo.state.NotificationScreen
 import com.example.jetpackcomposedemo.state.SideEffectHandlerScreen
@@ -23,8 +24,7 @@ class MainActivity : ComponentActivity() {
 //                    NotificationScreen()
 //                    SideEffectHandlerScreen()
 //                    ComposableListScreen()
-
-                    AppBarScreen()
+                    BadgeScreen()
                 }
             }
         }

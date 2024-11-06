@@ -39,6 +39,7 @@ fun SideEffectHandlerScreen() {
         RememberCoroutineScope(context = LocalContext.current)
         RememberUpdatedStateScreen()
         DisposableEffectScreen()
+        SideEffectScreen()
     }
 }
 

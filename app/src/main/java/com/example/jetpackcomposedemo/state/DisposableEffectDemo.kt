@@ -8,6 +8,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 
+// Can be used to do cleanup for e.g: on dispose of compose I want to stop location service or to stop media player etc.
 @Composable
 fun DisposableEffectScreen() {
     val state = remember { mutableStateOf(false) }

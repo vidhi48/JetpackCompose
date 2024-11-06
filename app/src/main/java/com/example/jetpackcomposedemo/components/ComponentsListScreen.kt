@@ -8,4 +8,5 @@ fun ComposableListScreen() {
     BadgeScreen()
     BottomSheetScreen()
     ButtonsScreen()
+    CardScreen()
 }

@@ -31,7 +31,7 @@ fun BottomSheetScreen() {
     val showBottomSheet = remember { mutableStateOf(false) }
 
     Column(
-        modifier = Modifier.fillMaxWidth().padding(top = 50.dp),
+        modifier = Modifier.fillMaxWidth().padding(top = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Button(

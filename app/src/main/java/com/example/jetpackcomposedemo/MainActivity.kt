@@ -8,9 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.example.jetpackcomposedemo.components.CheckBoxAndRadioScreen
-import com.example.jetpackcomposedemo.components.ComposableListScreen
-import com.example.jetpackcomposedemo.state.NotificationScreen
-import com.example.jetpackcomposedemo.state.SideEffectHandlerScreen
+import com.example.jetpackcomposedemo.components.DatePickersScreen
 import com.example.jetpackcomposedemo.ui.theme.JetpackComposeDemoTheme
 
 class MainActivity : ComponentActivity() {

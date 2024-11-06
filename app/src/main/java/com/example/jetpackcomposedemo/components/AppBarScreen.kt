@@ -1,5 +1,7 @@
 package com.example.jetpackcomposedemo.components
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AccountCircle
@@ -20,7 +22,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -93,6 +97,9 @@ fun AppBarScreen() {
             )
         }
     ) { innerPadding ->
-        Text("AppBar Demo")
+        Column(modifier = Modifier.padding(top = 50.dp)) {
+            BadgeScreen()
+            BottomSheetScreen()
+        }
     }
 }

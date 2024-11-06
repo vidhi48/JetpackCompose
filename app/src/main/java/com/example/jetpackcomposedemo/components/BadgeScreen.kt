@@ -1,7 +1,7 @@
 package com.example.jetpackcomposedemo.components
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ShoppingCart
@@ -21,9 +21,8 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun BadgeScreen() {
     val itemCount = remember { mutableIntStateOf(0) }
-    Column(modifier = Modifier.padding(top = 50.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+    Column(modifier = Modifier.fillMaxWidth().padding(top = 50.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         BadgedBox(badge = {
             if (itemCount.intValue > 0) {

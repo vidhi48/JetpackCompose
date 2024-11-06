@@ -7,4 +7,5 @@ fun ComposableListScreen() {
     AppBarScreen()
     BadgeScreen()
     BottomSheetScreen()
+    ButtonsScreen()
 }

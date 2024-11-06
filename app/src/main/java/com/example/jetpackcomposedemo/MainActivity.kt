@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import com.example.jetpackcomposedemo.components.AppBarScreen
 import com.example.jetpackcomposedemo.components.BadgeScreen
 import com.example.jetpackcomposedemo.components.BottomSheetScreen
+import com.example.jetpackcomposedemo.components.ButtonsScreen
 import com.example.jetpackcomposedemo.components.ComposableListScreen
 import com.example.jetpackcomposedemo.state.NotificationScreen
 import com.example.jetpackcomposedemo.state.SideEffectHandlerScreen
@@ -25,7 +26,7 @@ class MainActivity : ComponentActivity() {
 //                    NotificationScreen()
 //                    SideEffectHandlerScreen()
 //                    ComposableListScreen()
-                    BottomSheetScreen()
+                    ButtonsScreen()
                 }
             }
         }

@@ -32,6 +32,7 @@ fun CheckBoxAndRadioScreen() {
         RadioButtonScreen()
         ChipScreen()
         DatePickersScreen()
+        DialogScreen()
     }
 }
 

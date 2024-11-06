@@ -6,4 +6,5 @@ import androidx.compose.runtime.Composable
 fun ComposableListScreen() {
     AppBarScreen()
     BadgeScreen()
+    BottomSheetScreen()
 }

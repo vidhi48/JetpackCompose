@@ -9,4 +9,5 @@ fun ComposableListScreen() {
     BottomSheetScreen()
     ButtonsScreen()
     CardScreen()
+    CheckBoxAndRadioScreen()
 }

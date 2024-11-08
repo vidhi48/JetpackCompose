@@ -9,6 +9,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.example.jetpackcomposedemo.components.AvailRateScreen
 import com.example.jetpackcomposedemo.components.NavigationDrawerScreen
+import com.example.jetpackcomposedemo.components.SliderScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +20,7 @@ class MainActivity : ComponentActivity() {
 //                    NotificationScreen()
 //                    SideEffectHandlerScreen()
 //                    ComposableListScreen()
-                AvailRateScreen()
+                SliderScreen()
             }
         }
     }

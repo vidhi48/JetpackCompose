@@ -7,23 +7,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.jetpackcomposedemo.components.ButtonsScreen
-import com.example.jetpackcomposedemo.components.CheckBoxAndRadioScreen
-import com.example.jetpackcomposedemo.ui.theme.JetpackComposeDemoTheme
+import com.example.jetpackcomposedemo.components.AvailRateScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            JetpackComposeDemoTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+            Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 //                    NotificationScreen()
 //                    SideEffectHandlerScreen()
 //                    ComposableListScreen()
-
-                    ButtonsScreen()
-                }
+                AvailRateScreen()
             }
         }
     }

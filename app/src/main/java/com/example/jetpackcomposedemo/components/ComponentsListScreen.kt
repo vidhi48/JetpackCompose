@@ -8,4 +8,6 @@ fun ComposableListScreen() {
     ButtonsScreen()
     CardScreen()
     CheckBoxAndRadioScreen()
+    ListWithRowColumScreen()
+    AvailRateScreen()
 }

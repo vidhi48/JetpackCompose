@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import com.example.jetpackcomposedemo.components.AvailRateScreen
 import com.example.jetpackcomposedemo.components.NavigationDrawerScreen
 import com.example.jetpackcomposedemo.components.SliderScreen
+import com.example.jetpackcomposedemo.components.SnackBarScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
 //                    NotificationScreen()
 //                    SideEffectHandlerScreen()
 //                    ComposableListScreen()
-                SliderScreen()
+                SnackBarScreen()
             }
         }
     }

@@ -13,4 +13,5 @@ fun ComposableListScreen() {
     NavigationDrawerScreen()
     AvailRateScreen()
     SliderScreen()
+    SnackBarScreen()
 }

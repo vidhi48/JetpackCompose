@@ -30,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -53,7 +54,7 @@ fun NavigationDrawerScreen() {
         Scaffold(
             floatingActionButton = {
                 ExtendedFloatingActionButton(
-                    text = { Text("Show drawer") },
+                    text = { Text(stringResource(R.string.show_drawer)) },
                     icon = { Icon(Icons.Filled.Add, contentDescription = "") },
                     onClick = {
                         scope.launch {
@@ -91,32 +92,32 @@ fun NavigationDrawerContentScreen() {
             Column(
                 modifier = Modifier.padding(start = 15.dp)
             ) {
-                Text("Vidhi Patel", fontWeight = FontWeight.Bold, fontSize = 18.sp)
-                Text("test@hotmail.com", fontSize = 14.sp, fontWeight = FontWeight.Thin)
-                Text("+91 9876543210", fontSize = 14.sp, fontWeight = FontWeight.Thin)
+                Text(stringResource(R.string.vidhi_patel), fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                Text(stringResource(R.string.test_hotmail_com), fontSize = 14.sp, fontWeight = FontWeight.Thin)
+                Text(stringResource(R.string.mobileNo), fontSize = 14.sp, fontWeight = FontWeight.Thin)
             }
         }
 
         TextButton(
             onClick = { }
         ) {
-            TextButtonWithIcons(text = "Profile", icon = Icons.Filled.Person, onClick = {})
+            TextButtonWithIcons(text = stringResource(R.string.profile), icon = Icons.Filled.Person, onClick = {})
         }
         TextButton(
             onClick = { }
         ) {
-            TextButtonWithIcons("Settings", Icons.Filled.Settings, {})
+            TextButtonWithIcons(stringResource(R.string.settings), Icons.Filled.Settings, {})
         }
         TextButton(
             onClick = { }
         ) {
-            TextButtonWithIcons("Chat", Icons.Outlined.Send, {})
+            TextButtonWithIcons(stringResource(R.string.chat), Icons.Outlined.Send, {})
         }
         HorizontalDivider()
         TextButton(
             onClick = { }
         ) {
-            TextButtonWithIcons("Logout", Icons.Filled.Lock, {})
+            TextButtonWithIcons(stringResource(R.string.logout), Icons.Filled.Lock, {})
         }
     }
 }

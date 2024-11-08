@@ -7,11 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.jetpackcomposedemo.components.AvailRateScreen
-import com.example.jetpackcomposedemo.components.NavigationDrawerScreen
-import com.example.jetpackcomposedemo.components.SliderScreen
-import com.example.jetpackcomposedemo.components.SnackBarScreen
-import com.example.jetpackcomposedemo.components.TimePickerScreen
+import com.example.jetpackcomposedemo.components.TextScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +18,7 @@ class MainActivity : ComponentActivity() {
 //                    NotificationScreen()
 //                    SideEffectHandlerScreen()
 //                    ComposableListScreen()
-                SnackBarScreen()
+                TextScreen()
             }
         }
     }

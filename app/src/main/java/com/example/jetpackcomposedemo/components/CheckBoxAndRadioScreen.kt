@@ -26,7 +26,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.jetpackcomposedemo.R
 
 @Composable
 fun CheckBoxAndRadioScreen() {
@@ -51,13 +53,13 @@ fun CheckBoxScreen() {
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text("Checkbox")
+            Text(stringResource(R.string.checkbox))
             Checkbox(checked = checked,
                 onCheckedChange = { checked = it })
         }
 
         Text(
-            if (checked) "Checkbox is checked" else "Checkbox is unchecked"
+            if (checked) stringResource(R.string.checkbox_is_checked) else stringResource(R.string.checkbox_is_unchecked)
         )
     }
 }
@@ -92,7 +94,7 @@ fun RadioButtonScreen() {
         }
 
         Text(
-            text = "Selected option: $selectedOption",
+            text = stringResource(R.string.selected_option, selectedOption),
             modifier = Modifier.padding(top = 16.dp, start = 16.dp)
         )
     }
@@ -105,18 +107,20 @@ fun ChipScreen() {
     Row (modifier = Modifier.padding(top = 20.dp, start = 16.dp)) {
         AssistChip(
             onClick = { Log.e("Chip", "Chip Tapped!")},
-            label = { Text("Assist Chip") },
+            label = { Text(stringResource(R.string.assist_chip)) },
             leadingIcon = {
                 Icon(Icons.Filled.Settings, contentDescription = "Localized description")
                 Modifier.size(AssistChipDefaults.IconSize)
             }
         )
 
-        VerticalDivider(thickness = 2.dp, modifier = Modifier.height(50.dp).padding(start = 20.dp, end = 20.dp))
+        VerticalDivider(thickness = 2.dp, modifier = Modifier
+            .height(50.dp)
+            .padding(start = 20.dp, end = 20.dp))
 
         FilterChip(
             onClick = { selected = !selected },
-            label = { Text("Filter Chip") },
+            label = { Text(stringResource(R.string.filter_chip)) },
             selected = selected,
             leadingIcon = if (selected) {
                 {

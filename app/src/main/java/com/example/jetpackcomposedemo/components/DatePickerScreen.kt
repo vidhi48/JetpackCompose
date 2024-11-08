@@ -26,8 +26,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
+import com.example.jetpackcomposedemo.R
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -63,7 +65,7 @@ fun DockedDatePicker() {
         OutlinedTextField(
             value = selectedDate,
             onValueChange = {  },
-            label = { Text("DOB") },
+            label = { Text(stringResource(R.string.dob)) },
             readOnly = true,
             trailingIcon = {
                 IconButton(onClick = { showDatePicker = !showDatePicker }) {

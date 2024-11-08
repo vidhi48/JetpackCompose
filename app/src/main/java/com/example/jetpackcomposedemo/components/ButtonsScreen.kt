@@ -21,7 +21,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.jetpackcomposedemo.R
 
 @Composable
 fun ButtonsScreen() {
@@ -32,11 +34,11 @@ fun ButtonsScreen() {
         verticalArrangement = Arrangement.Center
     ) {
         Button(onClick = {  }) {
-            Text("Filled button")
+            Text(stringResource(R.string.filled_button))
         }
 
         FilledTonalButton(onClick = {}) {
-            Text("Filled Tonal Button")
+            Text(stringResource(R.string.filled_tonal_button))
         }
 
         OutlinedButton(
@@ -48,15 +50,15 @@ fun ButtonsScreen() {
             ),
             border = BorderStroke(width = 2.dp, color = Color.Cyan)
         ) {
-            Text("Outlined Button")
+            Text(stringResource(R.string.outlined_button))
         }
 
         ElevatedButton(onClick = { }) {
-            Text("Elevated Button")
+            Text(stringResource(R.string.elevated_button))
         }
 
         TextButton(onClick = { }) {
-            Text("Text Button")
+            Text(stringResource(R.string.text_button))
         }
 
         FloatingActionButton(
@@ -71,7 +73,7 @@ fun ButtonsScreen() {
             modifier = Modifier.padding(8.dp)
         ) {
             Icon(Icons.Filled.Add, contentDescription = "Add")
-            Text("Add")
+            Text(stringResource(R.string.add))
         }
     }
 }

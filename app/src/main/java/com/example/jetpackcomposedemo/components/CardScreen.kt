@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -56,8 +57,8 @@ fun CardScreen() {
                 )
             }
             Column {
-                Text("Banana", fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                Text("1° C I 29 MT  I 65.0% I 15.0  ", fontSize = 15.sp, color = colorResource(R.color.darkGreen))
+                Text(stringResource(R.string.banana), fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                Text(stringResource(R.string.temp), fontSize = 15.sp, color = colorResource(R.color.darkGreen))
             }
         }
     }

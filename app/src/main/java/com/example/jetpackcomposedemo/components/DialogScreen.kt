@@ -25,6 +25,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.example.jetpackcomposedemo.R
@@ -37,7 +38,7 @@ fun DialogScreen() {
     Column {
         Button(onClick = { openAlertDialog.value = true },
             modifier = Modifier.padding(16.dp)) {
-            Text("Show Alert Dialog")
+            Text(stringResource(R.string.show_alert_dialog))
         }
 
         if (openAlertDialog.value) {
@@ -52,7 +53,7 @@ fun DialogScreen() {
 
         Button(onClick = { openCustomDialog.value = true },
             modifier = Modifier.padding(16.dp)) {
-            Text("Custom Dialog")
+            Text(stringResource(R.string.custom_dialog))
         }
 
         if (openCustomDialog.value) {
@@ -92,7 +93,7 @@ fun AlertDialogDemo(
                     onConfirm()
                 }
             ) {
-                Text("Confirm")
+                Text(stringResource(R.string.confirm))
             }
         },
         dismissButton = {
@@ -101,7 +102,7 @@ fun AlertDialogDemo(
                     onDismiss()
                 }
             ) {
-                Text("Dismiss")
+                Text(stringResource(R.string.dismiss))
             }
         }
     )
@@ -130,7 +131,7 @@ fun CustomDialog(onDismiss: () -> Unit, onConfirm: () -> Unit, painter: Painter)
                         .height(160.dp)
                 )
                 Text(
-                    text = "This is a dialog with buttons and an image.",
+                    text = stringResource(R.string.this_is_a_dialog_with_buttons_and_an_image),
                     modifier = Modifier.padding(16.dp),
                 )
                 Row(
@@ -142,13 +143,13 @@ fun CustomDialog(onDismiss: () -> Unit, onConfirm: () -> Unit, painter: Painter)
                         onClick = { onDismiss() },
                         modifier = Modifier.padding(8.dp),
                     ) {
-                        Text("Dismiss")
+                        Text(stringResource(R.string.dismiss))
                     }
                     TextButton(
                         onClick = { onConfirm() },
                         modifier = Modifier.padding(8.dp),
                     ) {
-                        Text("Confirm")
+                        Text(stringResource(R.string.confirm))
                     }
                 }
             }

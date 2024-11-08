@@ -16,12 +16,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.jetpackcomposedemo.R
 
 @Composable
 fun BadgeScreen() {
     val itemCount = remember { mutableIntStateOf(0) }
-    Column(modifier = Modifier.fillMaxWidth().padding(top = 50.dp),
+    Column(modifier = Modifier
+        .fillMaxWidth()
+        .padding(top = 50.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         BadgedBox(badge = {
@@ -41,7 +45,7 @@ fun BadgeScreen() {
             )
         }
         Button(onClick = { itemCount.intValue++} ) {
-            Text(text = "Add to cart")
+            Text(text = stringResource(R.string.add_to_cart))
         }
     }
 }

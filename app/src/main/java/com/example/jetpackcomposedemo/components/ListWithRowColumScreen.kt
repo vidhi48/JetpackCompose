@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -35,7 +36,7 @@ import com.example.jetpackcomposedemo.components.models.getVesselList
 fun ListWithRowColumScreen() {
     // This will not recycling the views
     Column(modifier = Modifier.padding(top = 50.dp)) {
-        Text(text = "Vessel List", fontWeight = FontWeight.Bold, fontSize = 20.sp, modifier = Modifier.padding(start = 16.dp))
+        Text(text = stringResource(R.string.vessel_list), fontWeight = FontWeight.Bold, fontSize = 20.sp, modifier = Modifier.padding(start = 16.dp))
         Row(
             modifier = Modifier
                 .horizontalScroll(rememberScrollState())
@@ -45,7 +46,7 @@ fun ListWithRowColumScreen() {
                 VesselList(title = item.title, subtitle = item.subtitle)
             }
         }
-        Text(text = "Vessel List", fontWeight = FontWeight.Bold, fontSize = 20.sp, modifier = Modifier.padding(start = 16.dp, top = 15.dp))
+        Text(text = stringResource(R.string.vessel_list), fontWeight = FontWeight.Bold, fontSize = 20.sp, modifier = Modifier.padding(start = 16.dp, top = 15.dp))
         Column(
             modifier = Modifier
                 .verticalScroll(rememberScrollState())
@@ -99,28 +100,30 @@ fun ScheduleList() {
                     modifier = Modifier.size(50.dp)
                 )
                 Row(
-                    modifier = Modifier.fillMaxWidth().padding(start = 23.dp, end = 10.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(start = 23.dp, end = 10.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text(text = "28 Jul", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text(text = stringResource(R.string._28_jul), fontWeight = FontWeight.Bold, fontSize = 12.sp)
                     Column(modifier = Modifier.padding(start = 5.dp)) {
-                        Text(text = "6 days", fontSize = 10.sp)
+                        Text(text = stringResource(R.string._6_days), fontSize = 10.sp)
                         Image(
                             painter = painterResource(id = R.drawable.arrow),
                             contentDescription = "",
                             modifier = Modifier.size(width = 50.dp, height = 10.dp),
                             contentScale = ContentScale.FillBounds
                         )
-                        Text(text = "Direct", fontSize = 10.sp)
+                        Text(text = stringResource(R.string.direct), fontSize = 10.sp)
                     }
-                    Text(text = "31 Jul", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text(text = stringResource(R.string._31_jul), fontWeight = FontWeight.Bold, fontSize = 12.sp)
 
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        Text(text = "$2,535", fontSize = 16.sp, fontWeight = FontWeight.Bold)
-                        Text(text = "Freight", fontSize = 8.sp)
+                        Text(text = stringResource(R.string._2_535), fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                        Text(text = stringResource(R.string.freight), fontSize = 8.sp)
                     }
                 }
             }
@@ -128,15 +131,17 @@ fun ScheduleList() {
             HorizontalDivider(modifier = Modifier.padding(start = 22.dp, end = 22.dp, top = 15.dp))
 
             Row(
-                modifier = Modifier.fillMaxWidth().padding(start = 32.dp, top = 15.dp, bottom = 16.dp, end = 15.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 32.dp, top = 15.dp, bottom = 16.dp, end = 15.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Text(text = "Inventory Status", fontSize = 9.sp)
-                    Text(text = "Confirmed DO", fontSize = 11.sp)
+                    Text(text = stringResource(R.string.inventory_status), fontSize = 9.sp)
+                    Text(text = stringResource(R.string.confirmed_do), fontSize = 11.sp)
                 }
 
                 Button(
@@ -148,7 +153,7 @@ fun ScheduleList() {
                         disabledContentColor = Color.Black
                     )
                 ) {
-                    Text(text = "Check Full Quote")
+                    Text(text = stringResource(R.string.check_full_quote))
                 }
             }
         }

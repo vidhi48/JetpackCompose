@@ -1,5 +1,7 @@
 package com.example.jetpackcomposedemo.components
 
+import android.text.format.Time
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
@@ -54,23 +56,25 @@ fun SnackBarScreen() {
             )
         }
     ){ contentPadding ->
-
-        var checked by remember { mutableStateOf(true) }
-        Switch(
-            modifier = Modifier.padding(
-                contentPadding.calculateTopPadding()
-            ),
-            checked = checked,
-            onCheckedChange = { checked = it },
-            thumbContent = {
-                if (checked) {
-                    Icon(
-                        imageVector = Icons.Filled.Check,
-                        contentDescription = null,
-                        modifier = Modifier.size(SwitchDefaults.IconSize),
-                    )
+        Column {
+            var checked by remember { mutableStateOf(true) }
+            Switch(
+                modifier = Modifier.padding(
+                    contentPadding.calculateTopPadding()
+                ),
+                checked = checked,
+                onCheckedChange = { checked = it },
+                thumbContent = {
+                    if (checked) {
+                        Icon(
+                            imageVector = Icons.Filled.Check,
+                            contentDescription = null,
+                            modifier = Modifier.size(SwitchDefaults.IconSize),
+                        )
+                    }
                 }
-            }
-        )
+            )
+            TimePickerScreen()
+        }
     }
 }

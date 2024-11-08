@@ -11,6 +11,7 @@ import com.example.jetpackcomposedemo.components.AvailRateScreen
 import com.example.jetpackcomposedemo.components.NavigationDrawerScreen
 import com.example.jetpackcomposedemo.components.SliderScreen
 import com.example.jetpackcomposedemo.components.SnackBarScreen
+import com.example.jetpackcomposedemo.components.TimePickerScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

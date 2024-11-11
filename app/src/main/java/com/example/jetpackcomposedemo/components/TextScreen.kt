@@ -50,6 +50,7 @@ fun TextScreen() {
         LongText()
         TextFieldDemo()
         OutlinedTextFieldDemo()
+        DropDownScreen()
     }
 }
 

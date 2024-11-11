@@ -1,6 +1,5 @@
 package com.example.jetpackcomposedemo.components
 
-import android.transition.Slide
 import androidx.compose.runtime.Composable
 
 @Composable
@@ -16,4 +15,5 @@ fun ComposableListScreen() {
     SnackBarScreen()
     TimePickerScreen()
     TextScreen()
+    DropDownScreen()
 }

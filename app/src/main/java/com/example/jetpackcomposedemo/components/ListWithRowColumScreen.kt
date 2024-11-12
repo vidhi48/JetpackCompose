@@ -36,7 +36,12 @@ import com.example.jetpackcomposedemo.components.models.getVesselList
 fun ListWithRowColumScreen() {
     // This will not recycling the views
     Column(modifier = Modifier.padding(top = 50.dp)) {
-        Text(text = stringResource(R.string.vessel_list), fontWeight = FontWeight.Bold, fontSize = 20.sp, modifier = Modifier.padding(start = 16.dp))
+        Text(
+            text = stringResource(R.string.vessel_list),
+            fontWeight = FontWeight.Bold,
+            fontSize = 20.sp,
+            modifier = Modifier.padding(start = 16.dp)
+        )
         Row(
             modifier = Modifier
                 .horizontalScroll(rememberScrollState())
@@ -46,7 +51,12 @@ fun ListWithRowColumScreen() {
                 VesselList(title = item.title, subtitle = item.subtitle)
             }
         }
-        Text(text = stringResource(R.string.vessel_list), fontWeight = FontWeight.Bold, fontSize = 20.sp, modifier = Modifier.padding(start = 16.dp, top = 15.dp))
+        Text(
+            text = stringResource(R.string.vessel_list),
+            fontWeight = FontWeight.Bold,
+            fontSize = 20.sp,
+            modifier = Modifier.padding(start = 16.dp, top = 15.dp)
+        )
         Column(
             modifier = Modifier
                 .verticalScroll(rememberScrollState())
@@ -71,8 +81,10 @@ fun VesselList(title: String, subtitle: String) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(text = title, fontWeight = FontWeight.Bold)
-            Text(text = subtitle, fontWeight = FontWeight.Thin, fontSize = 12.sp,
-                modifier = Modifier.padding(top = 6.dp))
+            Text(
+                text = subtitle, fontWeight = FontWeight.Thin, fontSize = 12.sp,
+                modifier = Modifier.padding(top = 6.dp)
+            )
         }
     }
 }
@@ -80,7 +92,7 @@ fun VesselList(title: String, subtitle: String) {
 @Preview
 @Composable
 fun ScheduleList() {
-    Card (
+    Card(
         modifier = Modifier.padding(end = 16.dp, top = 12.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         elevation = CardDefaults.cardElevation(
@@ -106,7 +118,11 @@ fun ScheduleList() {
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text(text = stringResource(R.string._28_jul), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text(
+                        text = stringResource(R.string._28_jul),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp
+                    )
                     Column(modifier = Modifier.padding(start = 5.dp)) {
                         Text(text = stringResource(R.string._6_days), fontSize = 10.sp)
                         Image(
@@ -117,12 +133,20 @@ fun ScheduleList() {
                         )
                         Text(text = stringResource(R.string.direct), fontSize = 10.sp)
                     }
-                    Text(text = stringResource(R.string._31_jul), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text(
+                        text = stringResource(R.string._31_jul),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp
+                    )
 
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        Text(text = stringResource(R.string._2_535), fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                        Text(
+                            text = stringResource(R.string._2_535),
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold
+                        )
                         Text(text = stringResource(R.string.freight), fontSize = 8.sp)
                     }
                 }

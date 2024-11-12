@@ -27,14 +27,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.jetpackcomposedemo.R
 import com.example.jetpackcomposedemo.components.models.getVesselList
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview
 @Composable
-fun AvailRateScreen() {
+fun RateDisplayScreen(navController: NavController) {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
     ModalNavigationDrawer(
@@ -49,11 +49,18 @@ fun AvailRateScreen() {
             topBar = {
                 TopAppBar(
                     title = {
-                        Text(text = stringResource(R.string.avail_rate), fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                        Text(
+                            text = stringResource(R.string.avail_rate),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp
+                        )
                     },
                     navigationIcon = {
                         IconButton(onClick = { /* doSomething() */ }) {
-                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Localized description")
+                            Icon(
+                                Icons.AutoMirrored.Filled.ArrowBack,
+                                contentDescription = "Localized description"
+                            )
                         }
                     },
                     actions = {
@@ -72,9 +79,17 @@ fun AvailRateScreen() {
             }
         ) { innerPadding ->
             Column(
-                modifier = Modifier.padding(top = innerPadding.calculateTopPadding(), bottom = 15.dp, start = 16.dp)
+                modifier = Modifier.padding(
+                    top = innerPadding.calculateTopPadding(),
+                    bottom = 15.dp,
+                    start = 16.dp
+                )
             ) {
-                Text(stringResource(R.string.vessel_list), fontWeight = FontWeight.Bold, fontSize = 20.sp)
+                Text(
+                    stringResource(R.string.vessel_list),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp
+                )
                 LazyRow(modifier = Modifier.padding(top = 8.dp)) {
 
                     // Use item when we want to display single item
@@ -90,7 +105,12 @@ fun AvailRateScreen() {
                     }*/
                 }
 
-                Text(stringResource(R.string.schedule_list), fontWeight = FontWeight.Bold, fontSize = 20.sp, modifier = Modifier.padding(top = 25.dp))
+                Text(
+                    stringResource(R.string.schedule_list),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp,
+                    modifier = Modifier.padding(top = 25.dp)
+                )
                 LazyColumn {
                     items(15) {
                         ScheduleList()

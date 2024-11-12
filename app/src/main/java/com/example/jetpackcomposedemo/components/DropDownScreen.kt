@@ -33,35 +33,35 @@ fun DropDownScreen() {
     }
     val cities = listOf("Delhi", "Mumbai", "Chennai", "Kolkata", "Hyderabad", "Bengaluru", "Pune")
 
-   Column(
-       modifier = Modifier.padding(top = 15.dp)
-   ){
-       OutlinedTextField(
-           value = selectedCity,
-           onValueChange = { selectedCity = it },
-           modifier = Modifier.fillMaxWidth(),
-           label = { Text("Select City") },
-           trailingIcon = {
-               Icon(icon, "contentDescription",
-                   Modifier.clickable { expandState = !expandState })
-           },
-           readOnly = true
-       )
+    Column(
+        modifier = Modifier.padding(top = 15.dp)
+    ) {
+        OutlinedTextField(
+            value = selectedCity,
+            onValueChange = { selectedCity = it },
+            modifier = Modifier.fillMaxWidth(),
+            label = { Text("Select City") },
+            trailingIcon = {
+                Icon(icon, "contentDescription",
+                    Modifier.clickable { expandState = !expandState })
+            },
+            readOnly = true
+        )
 
-       DropdownMenu(
-           expanded = expandState,
-           onDismissRequest = { expandState = false },
-           modifier = Modifier.fillMaxWidth()
-       ) {
-           cities.forEach { city ->
-               DropdownMenuItem(
-                   text = { Text(text = city) },
-                   onClick = {
-                       selectedCity = city
-                       expandState = false
-                   }
-               )
-           }
-       }
-   }
+        DropdownMenu(
+            expanded = expandState,
+            onDismissRequest = { expandState = false },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            cities.forEach { city ->
+                DropdownMenuItem(
+                    text = { Text(text = city) },
+                    onClick = {
+                        selectedCity = city
+                        expandState = false
+                    }
+                )
+            }
+        }
+    }
 }

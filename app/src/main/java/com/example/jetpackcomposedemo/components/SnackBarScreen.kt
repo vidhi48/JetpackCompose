@@ -31,7 +31,7 @@ fun SnackBarScreen() {
     val scope = rememberCoroutineScope()
     val snackBarHostState = remember { SnackbarHostState() }
 
-    Scaffold (
+    Scaffold(
         snackbarHost = {
             SnackbarHost(snackBarHostState)
         },
@@ -55,7 +55,7 @@ fun SnackBarScreen() {
                 }
             )
         }
-    ){ contentPadding ->
+    ) { contentPadding ->
         Column {
             var checked by remember { mutableStateOf(true) }
             Switch(

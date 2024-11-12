@@ -35,7 +35,7 @@ fun SliderScreen() {
     ) {
         Slider(
             value = sliderValue,
-            onValueChange = {sliderValue = it},
+            onValueChange = { sliderValue = it },
             colors = SliderDefaults.colors(
                 thumbColor = MaterialTheme.colorScheme.secondary,
                 activeTrackColor = MaterialTheme.colorScheme.secondary,
@@ -44,15 +44,17 @@ fun SliderScreen() {
             steps = 2,
             valueRange = 0f..50f,
             thumb = {
-                Icon(Icons.Filled.Favorite, contentDescription = "Localized description",
-                    modifier = Modifier.size(ButtonDefaults.IconSize))
+                Icon(
+                    Icons.Filled.Favorite, contentDescription = "Localized description",
+                    modifier = Modifier.size(ButtonDefaults.IconSize)
+                )
             }
         )
         Text(text = sliderValue.toString())
 
         RangeSlider(
             value = rangeSliderValue,
-            onValueChange = {rangeSliderValue = it},
+            onValueChange = { rangeSliderValue = it },
             valueRange = 0f..100f,
             steps = 3
         )

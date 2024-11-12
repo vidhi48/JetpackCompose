@@ -33,7 +33,7 @@ fun ButtonsScreen() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Button(onClick = {  }) {
+        Button(onClick = { }) {
             Text(stringResource(R.string.filled_button))
         }
 

@@ -23,9 +23,10 @@ import com.example.jetpackcomposedemo.R
 @Composable
 fun BadgeScreen() {
     val itemCount = remember { mutableIntStateOf(0) }
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .padding(top = 50.dp),
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 50.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         BadgedBox(badge = {
@@ -44,7 +45,7 @@ fun BadgeScreen() {
                 contentDescription = "Shopping cart"
             )
         }
-        Button(onClick = { itemCount.intValue++} ) {
+        Button(onClick = { itemCount.intValue++ }) {
             Text(text = stringResource(R.string.add_to_cart))
         }
     }

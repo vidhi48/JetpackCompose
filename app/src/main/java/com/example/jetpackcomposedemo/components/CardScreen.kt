@@ -57,8 +57,16 @@ fun CardScreen() {
                 )
             }
             Column {
-                Text(stringResource(R.string.banana), fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                Text(stringResource(R.string.temp), fontSize = 15.sp, color = colorResource(R.color.darkGreen))
+                Text(
+                    stringResource(R.string.banana),
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    stringResource(R.string.temp),
+                    fontSize = 15.sp,
+                    color = colorResource(R.color.darkGreen)
+                )
             }
         }
     }

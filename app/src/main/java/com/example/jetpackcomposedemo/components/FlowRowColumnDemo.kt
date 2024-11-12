@@ -17,17 +17,53 @@ import com.example.jetpackcomposedemo.helpers.ReusableAssistChip
 @Composable
 fun FlowRowColumnDemo() {
     FlowRow(modifier = Modifier.padding(12.dp)) {
-        ReusableAssistChip(onClick = { }, label = "Assist Chip", leadingIcon = Icons.Filled.Settings)
-        ReusableAssistChip(onClick = { }, label = "Assist Chip", leadingIcon = Icons.Filled.Settings)
-        ReusableAssistChip(onClick = { }, label = "Assist Chip", leadingIcon = Icons.Filled.Settings)
-        ReusableAssistChip(onClick = { }, label = "Assist Chip", leadingIcon = Icons.Filled.Settings)
+        ReusableAssistChip(
+            onClick = { },
+            label = "Assist Chip",
+            leadingIcon = Icons.Filled.Settings
+        )
+        ReusableAssistChip(
+            onClick = { },
+            label = "Assist Chip",
+            leadingIcon = Icons.Filled.Settings
+        )
+        ReusableAssistChip(
+            onClick = { },
+            label = "Assist Chip",
+            leadingIcon = Icons.Filled.Settings
+        )
+        ReusableAssistChip(
+            onClick = { },
+            label = "Assist Chip",
+            leadingIcon = Icons.Filled.Settings
+        )
     }
 
     FlowColumn(modifier = Modifier.padding(12.dp)) {
-        ReusableAssistChip(onClick = { }, label = "Assist Chip", leadingIcon = Icons.Filled.Settings)
-        ReusableAssistChip(onClick = { }, label = "Assist Chip", leadingIcon = Icons.Filled.Settings)
-        ReusableAssistChip(onClick = { }, label = "Assist Chip", leadingIcon = Icons.Filled.Settings)
-        ReusableAssistChip(onClick = { }, label = "Assist Chip", leadingIcon = Icons.Filled.Settings)
-        ReusableAssistChip(onClick = { }, label = "Assist Chip", leadingIcon = Icons.Filled.Settings)
+        ReusableAssistChip(
+            onClick = { },
+            label = "Assist Chip",
+            leadingIcon = Icons.Filled.Settings
+        )
+        ReusableAssistChip(
+            onClick = { },
+            label = "Assist Chip",
+            leadingIcon = Icons.Filled.Settings
+        )
+        ReusableAssistChip(
+            onClick = { },
+            label = "Assist Chip",
+            leadingIcon = Icons.Filled.Settings
+        )
+        ReusableAssistChip(
+            onClick = { },
+            label = "Assist Chip",
+            leadingIcon = Icons.Filled.Settings
+        )
+        ReusableAssistChip(
+            onClick = { },
+            label = "Assist Chip",
+            leadingIcon = Icons.Filled.Settings
+        )
     }
 }

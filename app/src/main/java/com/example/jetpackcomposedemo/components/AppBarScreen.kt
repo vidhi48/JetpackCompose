@@ -45,18 +45,24 @@ fun AppBarScreen() {
                     IconButton(
                         onClick = { /* doSomething() */ }
                     ) {
-                        Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Localized description")
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "Localized description"
+                        )
                     }
                 },
                 actions = {
                     IconButton(onClick = { /* doSomething() */ }) {
-                        Icon(imageVector = Icons.Filled.Menu,
-                            contentDescription = "Localized description")
+                        Icon(
+                            imageVector = Icons.Filled.Menu,
+                            contentDescription = "Localized description"
+                        )
                     }
                     IconButton(onClick = { /* doSomething() */ }) {
-                        Icon(imageVector = Icons.Filled.Menu,
-                            contentDescription = "Localized description")
+                        Icon(
+                            imageVector = Icons.Filled.Menu,
+                            contentDescription = "Localized description"
+                        )
                     }
                 }
             )

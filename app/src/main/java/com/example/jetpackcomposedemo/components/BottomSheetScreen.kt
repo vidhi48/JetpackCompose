@@ -48,7 +48,11 @@ fun BottomSheetScreen() {
                     modifier = Modifier.padding(top = 50.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Text(stringResource(R.string.bottom_sheet_content), fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                    Text(
+                        stringResource(R.string.bottom_sheet_content),
+                        fontSize = 15.sp,
+                        fontWeight = FontWeight.Bold
+                    )
                     Button(onClick = { showBottomSheet.value = false }) {
                         Text(stringResource(R.string.close_bottom_sheet))
                     }

@@ -64,7 +64,7 @@ fun DockedDatePicker() {
     ) {
         OutlinedTextField(
             value = selectedDate,
-            onValueChange = {  },
+            onValueChange = { },
             label = { Text(stringResource(R.string.dob)) },
             readOnly = true,
             trailingIcon = {

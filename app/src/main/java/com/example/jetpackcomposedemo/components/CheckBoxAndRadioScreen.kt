@@ -47,9 +47,11 @@ fun CheckBoxAndRadioScreen() {
 fun CheckBoxScreen() {
     var checked by remember { mutableStateOf(true) }
 
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .padding(start = 16.dp, end = 16.dp, top = 100.dp)) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 16.dp, end = 16.dp, top = 100.dp)
+    ) {
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -67,7 +69,7 @@ fun CheckBoxScreen() {
 @Composable
 fun RadioButtonScreen() {
     val foodPref = listOf("Veg", "Non Veg.", "Both")
-    val (selectedOption, onOptionSelected) = remember { mutableStateOf(foodPref[1] ) }
+    val (selectedOption, onOptionSelected) = remember { mutableStateOf(foodPref[1]) }
 
     Column(modifier = Modifier.padding(top = 20.dp)) {
         foodPref.forEach { text ->
@@ -81,7 +83,7 @@ fun RadioButtonScreen() {
                         }
                     ),
                 verticalAlignment = Alignment.CenterVertically
-            ){
+            ) {
                 RadioButton(
                     selected = (text == selectedOption),
                     onClick = { onOptionSelected(text) }
@@ -104,9 +106,9 @@ fun RadioButtonScreen() {
 fun ChipScreen() {
     var selected by remember { mutableStateOf(false) }
 
-    Row (modifier = Modifier.padding(top = 20.dp, start = 16.dp)) {
+    Row(modifier = Modifier.padding(top = 20.dp, start = 16.dp)) {
         AssistChip(
-            onClick = { Log.e("Chip", "Chip Tapped!")},
+            onClick = { Log.e("Chip", "Chip Tapped!") },
             label = { Text(stringResource(R.string.assist_chip)) },
             leadingIcon = {
                 Icon(Icons.Filled.Settings, contentDescription = "Localized description")
@@ -114,9 +116,11 @@ fun ChipScreen() {
             }
         )
 
-        VerticalDivider(thickness = 2.dp, modifier = Modifier
-            .height(50.dp)
-            .padding(start = 20.dp, end = 20.dp))
+        VerticalDivider(
+            thickness = 2.dp, modifier = Modifier
+                .height(50.dp)
+                .padding(start = 20.dp, end = 20.dp)
+        )
 
         FilterChip(
             onClick = { selected = !selected },

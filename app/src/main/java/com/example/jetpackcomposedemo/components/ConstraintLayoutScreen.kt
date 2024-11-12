@@ -23,14 +23,14 @@ import com.example.jetpackcomposedemo.R
 @Preview
 @Composable
 fun ConstraintLayoutScreen() {
-    Card (
+    Card(
         modifier = Modifier.padding(12.dp)
     ) {
         ConstraintLayout {
             val (card, column) = createRefs()
             val startGuideLine = createGuidelineFromStart(0.01f)
 
-            Card (
+            Card(
                 modifier = Modifier
                     .constrainAs(card) {
                         top.linkTo(parent.top)
@@ -42,15 +42,20 @@ fun ConstraintLayoutScreen() {
                 Image(
                     painter = painterResource(R.drawable.banana),
                     contentDescription = "",
-                    modifier = Modifier.padding(10.dp).height(42.dp).width(42.dp)
+                    modifier = Modifier
+                        .padding(10.dp)
+                        .height(42.dp)
+                        .width(42.dp)
                 )
             }
 
             Column(
-                modifier = Modifier.constrainAs(column) {
-                    start.linkTo(card.end)
-                    centerVerticallyTo(card)
-                }.padding(12.dp)
+                modifier = Modifier
+                    .constrainAs(column) {
+                        start.linkTo(card.end)
+                        centerVerticallyTo(card)
+                    }
+                    .padding(12.dp)
             ) {
                 Text(
                     "Banana",
@@ -58,7 +63,8 @@ fun ConstraintLayoutScreen() {
                     fontFamily = FontFamily(Font(R.font.roboto_bold))
                 )
 
-                Text("1° C I 29 MT  I 65.0% I 15.0",
+                Text(
+                    "1° C I 29 MT  I 65.0% I 15.0",
                     fontSize = 12.sp,
                     fontFamily = FontFamily(Font(R.font.roboto_regular)),
                     color = colorResource(R.color.darkGreen)

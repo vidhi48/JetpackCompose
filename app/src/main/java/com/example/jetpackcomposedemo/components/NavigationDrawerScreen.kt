@@ -92,16 +92,31 @@ fun NavigationDrawerContentScreen() {
             Column(
                 modifier = Modifier.padding(start = 15.dp)
             ) {
-                Text(stringResource(R.string.vidhi_patel), fontWeight = FontWeight.Bold, fontSize = 18.sp)
-                Text(stringResource(R.string.test_hotmail_com), fontSize = 14.sp, fontWeight = FontWeight.Thin)
-                Text(stringResource(R.string.mobileNo), fontSize = 14.sp, fontWeight = FontWeight.Thin)
+                Text(
+                    stringResource(R.string.vidhi_patel),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp
+                )
+                Text(
+                    stringResource(R.string.test_hotmail_com),
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Thin
+                )
+                Text(
+                    stringResource(R.string.mobileNo),
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Thin
+                )
             }
         }
 
         TextButton(
             onClick = { }
         ) {
-            TextButtonWithIcons(text = stringResource(R.string.profile), icon = Icons.Filled.Person, onClick = {})
+            TextButtonWithIcons(
+                text = stringResource(R.string.profile),
+                icon = Icons.Filled.Person,
+                onClick = {})
         }
         TextButton(
             onClick = { }

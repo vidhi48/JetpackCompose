@@ -66,7 +66,7 @@ fun TextDemo() {
         fontFamily = FontFamily(Font(R.font.roboto_bold)),
         textAlign = TextAlign.Center,
         textDecoration = TextDecoration.Underline,
-        )
+    )
 }
 
 @Composable
@@ -79,8 +79,8 @@ fun MultiLineText() {
                 SpanStyle(
                     brush = Brush.linearGradient(
                         colors = listOf(Color.Red, Color.Blue)
+                    )
                 )
-            )
             ) {
                 append("because they are blinded.")
             }

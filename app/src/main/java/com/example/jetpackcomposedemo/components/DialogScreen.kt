@@ -36,8 +36,10 @@ fun DialogScreen() {
     val openCustomDialog = remember { mutableStateOf(false) }
 
     Column {
-        Button(onClick = { openAlertDialog.value = true },
-            modifier = Modifier.padding(16.dp)) {
+        Button(
+            onClick = { openAlertDialog.value = true },
+            modifier = Modifier.padding(16.dp)
+        ) {
             Text(stringResource(R.string.show_alert_dialog))
         }
 
@@ -51,8 +53,10 @@ fun DialogScreen() {
             )
         }
 
-        Button(onClick = { openCustomDialog.value = true },
-            modifier = Modifier.padding(16.dp)) {
+        Button(
+            onClick = { openCustomDialog.value = true },
+            modifier = Modifier.padding(16.dp)
+        ) {
             Text(stringResource(R.string.custom_dialog))
         }
 

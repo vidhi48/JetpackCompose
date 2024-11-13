@@ -18,9 +18,7 @@ fun MainDemoListScreen(navController: NavController) {
     Column(
         modifier = Modifier.padding(top = 50.dp, start = 16.dp, end = 16.dp)
     ) {
-
         Text("Jetpack Compose", fontSize = 20.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(bottom = 25.dp))
-
         Button(
             onClick = { navController.navigate(Screens.StateScreen)},
             modifier = Modifier.fillMaxWidth()
